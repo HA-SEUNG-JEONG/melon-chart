@@ -25,9 +25,18 @@ export async function GET(req: Request) {
     return { rank, title };
   });
 
+  const target = rows.reduce<{ rank: string; title: string } | null>((found, row) => {
+    if (found) return found;
+    const title = $(row).find(".ellipsis.rank01 span a").text().trim();
+    const rank = $(row).find(".rank").first().text().trim();
+    if (title.includes("Heavy Serenade")) return { rank, title };
+    return null;
+  }, null);
+
   return Response.json({
     status: res.status,
     rowCount: rows.length,
+    heavySerenade: target ?? "NOT IN TOP100",
     top10,
   });
 }
