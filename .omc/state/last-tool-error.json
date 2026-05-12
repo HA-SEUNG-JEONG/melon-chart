@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"NEXT_PUBLIC_VAPID_PUBLIC_KEY=dummy UPSTASH_REDIS_REST_URL=https://x.upstash.io UPSTASH_REDIS_REST_TOKEN=x VAPID_PRIVATE_KEY=x VAPID_EMAIL=x@x.com CRON_SECRET=x rtk npm run build 2>&1\",\"tim...",
+  "error": "Exit code 1\n> next build\n   ▲ Next.js 15.5.18\n   Creating an optimized production build ...\n ✓ Compiled successfully in 18.7s\n   Linting and checking validity of types ...\n   Collecting page data ...\n ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.\n We detected multiple lockfiles and selected the directory of /Users/haseung/package-lock.json as the root directory.\n To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of...",
+  "timestamp": "2026-05-12T02:57:46.769Z",
+  "retry_count": 2
+}
